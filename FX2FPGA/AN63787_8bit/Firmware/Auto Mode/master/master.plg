@@ -1,0 +1,22 @@
+<html>
+<body>
+<pre>
+<h1>µVision2 Build Log</h1>
+<h2>Project:</h2>
+C:\Documents and Settings\aksl\Desktop\final\AN63787\FX2LP Back To Back\FX2LP Back To Back\Firmware\Auto Mode\master\master.uv2
+Project File Date:  10/16/2013
+
+<h2>Output:</h2>
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_EZUSB_READI2C?I2C_RW
+Program Size: data=52.0 xdata=4674 code=3929
+creating hex file from "master"...
+User command #1: hex2bix -i -f 0xC2 -o master.iic master.hex
+Intel Hex file to EZ-USB Binary file conversion utility
+Copyright (c) 1997-2005, Cypress Semiconductor Inc.
+3990 Bytes written.
+Total Code Bytes = 3921
+Conversion completed successfully.
+"master" - 0 Error(s), 1 Warning(s).

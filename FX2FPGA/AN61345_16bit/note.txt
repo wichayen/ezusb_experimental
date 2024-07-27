@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------
+have to change Keil output option to :
+
+- D:\hong\ez_usb\FX2FPGA\hex2bix -i -f 0xC2 slave.iic slave.hex
+  (C:\Cypress\USB\CY3684_EZ-USB_FX2LP_DVK\1.1\Bin\hex2bix -i -f 0xC2 slave.iic slave.hex)
+- check enable run user program
+
+To convert .hex to .iic 
+-------------------------------------------------------------------------
+PC software
+
+use USBControlCenter_VS2015.sln
+-------------------------------------------------------------------------
+
+
+EP2 as OUT, 512 bytes, 		FLAGA is configured as empty flag for EP2 OUT FIFO 			PC->device
+EP6 as IN, 512 bytes, 		FLAGD is configured as full flag for EP6 IN FIFO			device->PC
+
+
+-------------------------------------------------------------------------
+FIFOADR[1:0] Selected FIFO
+00 EP2
+01 EP4
+10 EP6
+11 EP8
+-------------------------------------------------------------------------
+EP6IN : device -> PC
+SLWR SLWR pin should be asserted by the master to write data to the FIFO.
+
+write data to FIFO by
+	slwr = 0
+	slrd = 1
+	sloe = 1
+	faddr = 10
+
+
+-------------------------------------------------------------------------
